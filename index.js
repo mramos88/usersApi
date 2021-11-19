@@ -9,33 +9,96 @@ app.use(bodyParser.json());
 app.use(cors(corsOptions));
 
 
+
+
 var personas = [{
-  "id": 1,
-  "username": "dtwigg",
-  "rol": "Supervisor",
-  "admin": true
-}, {
-  "id": 2,
-  "username": "ygagen",
-  "rol": "Supervisor",
-  "admin": false
-}, {
-  "id": 3,
-  "username": "ssutor",
-  "rol": "Construction Manager",
-  "admin": false
-}, {
-  "id": 4,
-  "username": "rdyter",
-  "rol": "Supervisor",
-  "admin": true
-}, {
-  "id": 5,
-  "username": "ahellwich",
-  "rol": "Project Manager",
-  "admin": false
-}];
-var id =25;
+    "id": 1,
+    "nombre": "dtwigg",
+    "rol": "Supervisor",
+    "admin": true
+  }, {
+    "id": 2,
+    "username": "ygagen",
+    "rol": "Supervisor",
+    "admin": false
+  }, {
+    "id": 3,
+    "username": "ssutor",
+    "rol": "Construction Manager",
+    "admin": false
+  }, {
+    "id": 4,
+    "username": "rdyter",
+    "rol": "Supervisor",
+    "admin": true
+  }, {
+    "id": 5,
+    "username": "ahellwich",
+    "rol": "Project Manager",
+    "admin": false
+  }];
+  var clientes=[{
+    "id": 1,
+    "nombre": "Ferdinand",
+    "apellido": "Egglestone",
+    "sexo": "Male",
+    "edad": 36
+  }, {
+    "id": 2,
+    "nombre": "Rheba",
+    "apellido": "Prys",
+    "sexo": "Female",
+    "edad": 88
+  }, {
+    "id": 3,
+    "nombre": "Sadella",
+    "apellido": "Lyddon",
+    "sexo": "Male",
+    "edad": 92
+  }, {
+    "id": 4,
+    "nombre": "Kelley",
+    "apellido": "Gilfoyle",
+    "sexo": "Male",
+    "edad": 28
+  }, {
+    "id": 6,
+    "nombre": "Justina",
+    "apellido": "Panniers",
+    "sexo": "Female",
+    "edad": 56
+  }, {
+    "id": 8,
+    "nombre": "Valery",
+    "apellido": "Suffe",
+    "sexo": "Male",
+    "edad": 1
+  }, {
+    "id": 12,
+    "nombre": "Alexandro",
+    "apellido": "Esland",
+    "sexo": "Male",
+    "edad": 46
+  }, {
+    "id": 15,
+    "nombre": "Evangelina",
+    "apellido": "Devonport",
+    "sexo": "Male",
+    "edad": 9
+  }, {
+    "id": 14,
+    "nombre": "Janette",
+    "apellido": "Earengey",
+    "sexo": "Male",
+    "edad": 4
+  }, {
+    "id": 5,
+    "nombre": "Brendon",
+    "apellido": "Minchinden",
+    "sexo": "Male",
+    "edad": 97
+  }];
+var id =14;
 app.get("/login",function(req,res){
     
     res.send("ok");
@@ -62,7 +125,15 @@ app.get("/usuarios",function(req,res){
    
     
 });
-
+app.get("/clientes",function(req,res){
+   
+    res.send(clientes);    
+   
+           return;
+      
+      
+       
+   });
 
 app.post("/loginUsuario",function(req,res){
     setTimeout(function(){
