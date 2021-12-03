@@ -98,6 +98,69 @@ var personas = [{
     "sexo": "Male",
     "edad": 97
   }];
+
+
+var vehiculos=[{
+    "id": 1,
+    "make": "BMW",
+  "model": "7 Series",
+    "price": 19132,
+    "cantidadPuertas": 5
+  }, {
+    "id": 2,
+    "make": "Mazda",
+  "model": "B-Series",
+    "price": 23200,
+    "cantidadPuertas": 3
+  }, {
+    "id": 3,
+    "make": "Jensen",
+  "model": "Interceptor",
+    "price": 13000,
+    "cuatroXcuatro": false
+  }, {
+    "id": 4,
+   "make": "Ford",
+  "model": "F250",
+    "price": 9800,
+    "cuatroXcuatro": true
+  }, {
+    "id": 6,
+   "make": "Subaru",
+  "model": "Baja",
+    "price": 12000,
+    "cantidadPuertas": 3
+  }, {
+    "id": 8,
+    "make": "Volkswagen",
+  "model": "Eos",
+    "price": 25000,
+    "cantidadPuertas": 5
+  }, {
+    "id": 12,
+    "make": "Dodge",
+  "model": "Neon",
+    "price": 39800,
+    "cuatroXcuatro": true
+  }, {
+    "id": 15,
+    "make": "Dodge",
+  "model": "Caliber",
+    "price": 28350,
+     "cuatroXcuatro": true
+  }, {
+    "id": 14,
+    "make": "Chevrolet",
+  "model": "Silverado 1500",
+    "price": 27000,
+    "cantidadPuertas": 5
+  }, {
+    "id": 5,
+    "make": "Toyota",
+  "model": "Camry",
+    "price": 36000,
+    "cuatroXcuatro": true
+  }];
 var id =14;
 app.get("/login",function(req,res){
     
@@ -128,6 +191,15 @@ app.get("/usuarios",function(req,res){
 app.get("/clientes",function(req,res){
    
     res.send(clientes);    
+   
+           return;
+      
+      
+       
+   });
+app.get("/vehiculos",function(req,res){
+   
+    res.send(vehiculos);    
    
            return;
       
